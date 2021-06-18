@@ -1,0 +1,28 @@
+//utils
+@import "./utils/root";
+@import "./utils/hidden";
+@import "./utils/mixins";
+
+// base
+@import "./base/common";
+@import "./base/conteiner";
+
+//components
+@import "./components/link";
+@import "./components/title";
+@import "./components/social-list";
+@import "./components/modal-close-bth";
+@import "./components/modal-window";
+@import "./components/modal-form";
+@import "./components/button";
+
+//layuot
+@import "./layout/header";
+@import "./layout/hero";
+@import "./layout/rules";
+@import "./layout/our-work";
+@import "./layout/our-team";
+@import "./layout/customers";
+@import "./layout/filters";
+@import "./layout/gallery";
+@import "./layout/footer";

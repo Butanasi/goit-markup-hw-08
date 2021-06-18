@@ -1,0 +1,80 @@
+.header__conteiner {
+  display: flex;
+  align-items: center;
+}
+.header__nav {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  @include font($fs: 26px, $fw: 700, $lh: 31px);
+  font-family: Raleway, sans-serif;
+  // font-weight: var(--font-title);
+  // font-size: 26px;
+  // line-height: 1.19;
+  color: #000000;
+  text-decoration: none;
+}
+.logo__span {
+  color: var(--color-link);
+}
+.menu {
+  display: flex;
+  margin-left: 93px;
+
+  & .link {
+    display: flex;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+.menu__item {
+  margin-right: 50px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.contact {
+  display: flex;
+  margin-left: auto;
+  justify-content: center;
+  align-self: center;
+}
+.contact .contact__link {
+  display: flex;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.contact .contact__item {
+  margin-right: 50px;
+
+  .contact &:last-child {
+    margin-right: 0;
+  }
+}
+
+.contact__link {
+  color: var(--color-text);
+
+  
+}
+ .contact .contact__link {
+    display: flex;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+.contact__icon {
+  display: block;
+  margin-right: 10px;
+  justify-content: center;
+
+  fill: var(--color-text);
+  transition: fill var(--time-animation) var(--cubic);
+
+  .link:focus &,
+  .link:hover & {
+    fill: var(--color-link);
+  }
+}

@@ -1,0 +1,33 @@
+.our-work {
+  padding-bottom: 94px;
+}
+.our-work__title {
+  margin-bottom: 50px;
+}
+.our-work__list {
+  display: flex;
+  margin-top: -30px;
+  margin-left: -30px;
+}
+.our-work__item {
+  position: relative;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+.our-work__about {
+  position: absolute;
+  width: 370px;
+  height: 70px;
+  top: 224px;
+  left: 0;
+
+  padding: 27px 0;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+
+  background-color: rgba(47, 48, 58, 0.8);
+  color: #fff;
+}
