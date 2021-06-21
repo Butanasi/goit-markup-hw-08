@@ -1,9 +1,10 @@
 .social {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 44px);
+  gap: 10px;
+  justify-content: center;
 }
-.social__item_left + .social__item_left {
-  margin-left: 10px;
+.social__item_left {
 }
 .social__link {
   display: flex;

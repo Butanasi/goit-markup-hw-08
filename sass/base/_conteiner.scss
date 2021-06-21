@@ -1,23 +1,26 @@
 .conteiner {
   padding-left: 15px;
   padding-right: 15px;
+  width: 100%;
+  margin: 0 auto;
+  align-items: center;
 }
-// 480+
+// 480px
 @media screen and (min-width: 480px) {
   .conteiner {
-    max-width: 480px;
-    margin: 0 auto;
+    width: 480px;
   }
 }
 // 768+
 @media screen and (min-width: 768px) {
   .conteiner {
-    max-width: 768px;
+    width: 768px;
   }
 }
 // 1200+
 @media screen and (min-width: 1200px) {
   .conteiner {
     width: 1200px;
+    margin-bottom: 94px;
   }
 }
