@@ -30,7 +30,8 @@
     height: 70px;
   }
   .rules__list {
-    display: block;
+    display: grid;
+    justify-content: center;
   }
   .rules__about {
     margin-top: 0;
@@ -45,8 +46,8 @@
     text-align: left;
   }
   .rules__list {
-    display: flex;
-    flex-wrap: wrap;
+    grid-template-columns: repeat(2, 354px);
+    gap: 30px;
   }
   .rules__item {
     margin-bottom: 30px;
@@ -63,6 +64,7 @@
     margin: 94px 0;
   }
   .rules__list {
+    grid-template-columns: repeat(4, 270px);
   }
   .rules__item {
     width: 270px;
