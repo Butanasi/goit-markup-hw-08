@@ -4,6 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 60px;
 }
 .logo {
   @include font($fs: 24px, $fw: 700, $lh: 28px);
@@ -30,84 +31,102 @@
 .menu-btn__icon {
   width: 40px;
   height: 40px;
+  fill: currentColor;
+  transition: fill var(--time-animation) var(--cubic);
+
+  .header__menu-btn:hover &,
+  .header__menu-btn:focus & {
+    fill: var(--color-link);
+  }
 }
+// 768px
+@media screen and(min-width: 768px) {
+  .header__menu-btn {
+    display: none;
+  }
+  .header__conteiner {
+    display: flex;
+    align-items: center;
+    height: 80px;
+  }
+  .header__nav {
+    display: flex;
+    align-items: center;
+  }
+  .menu {
+    display: flex;
+    margin-left: 88px;
 
-// .header__conteiner {
-//   display: flex;
-//   align-items: center;
-// }
-// .header__nav {
-//   display: flex;
-//   align-items: center;
-// }
-// .logo {
-//   @include font($fs: 26px, $fw: 700, $lh: 31px);
-//   font-family: Raleway, sans-serif;
-//   // font-weight: var(--font-title);
-//   // font-size: 26px;
-//   // line-height: 1.19;
-//   color: #000000;
-//   text-decoration: none;
-// }
-// .logo__span {
-//   color: var(--color-link);
-// }
-// .menu {
-//   display: flex;
-//   margin-left: 93px;
+    & .link {
+      display: flex;
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
 
-//   & .link {
-//     display: flex;
-//     padding-top: 32px;
-//     padding-bottom: 32px;
-//   }
-// }
-// .menu__item {
-//   margin-right: 50px;
+    &__item {
+      margin-right: 50px;
 
-//   &:last-child {
-//     margin-right: 0;
-//   }
-// }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
 
-// .contact {
-//   display: flex;
-//   margin-left: auto;
-//   justify-content: center;
-//   align-self: center;
-// }
-// .contact .contact__link {
-//   display: flex;
-//   padding-top: 32px;
-//   padding-bottom: 32px;
-// }
-// .contact .contact__item {
-//   margin-right: 50px;
+  .contact {
+    display: block;
+    margin-left: 84px;
+    align-self: center;
 
-//   .contact &:last-child {
-//     margin-right: 0;
-//   }
-// }
+    &__item {
+      margin-bottom: 10px;
+    }
+    &__link {
+      display: flex;
+      @include font($fs: 12px, $fw: 500, $lh: 14px);
+      color: var(--color-text);
+      letter-spacing: 0.02em;
+    }
+    &__icon {
+      display: block;
+      margin-right: 10px;
+      justify-content: center;
 
-// .contact__link {
-//   color: var(--color-text);
+      fill: var(--color-text);
+      transition: fill var(--time-animation) var(--cubic);
 
-// }
-//  .contact .contact__link {
-//     display: flex;
-//     padding-top: 32px;
-//     padding-bottom: 32px;
-//   }
-// .contact__icon {
-//   display: block;
-//   margin-right: 10px;
-//   justify-content: center;
+      .contact__link:focus &,
+      .contact__link:hover & {
+        fill: var(--color-link);
+      }
+    }
+  }
+}
+@media screen and(min-width: 1200px) {
+  .header__conteiner {
+    margin-bottom: 0;
+  }
+  .menu {
+    margin-left: 93px;
+  }
+  .contact {
+    display: flex;
+    margin-left: auto;
+    justify-content: center;
+    align-self: center;
+  }
+  .contact__link {
+    display: flex;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .contact .contact__item {
+    margin-right: 50px;
 
-//   fill: var(--color-text);
-//   transition: fill var(--time-animation) var(--cubic);
-
-//   .link:focus &,
-//   .link:hover & {
-//     fill: var(--color-link);
-//   }
-// }
+    .contact &:last-child {
+      margin-right: 0;
+    }
+  }
+  .contact__link {
+    letter-spacing: var(--letter-spacing);
+  }
+}

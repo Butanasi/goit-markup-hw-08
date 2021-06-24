@@ -14,7 +14,7 @@
 <body>
     
     <!--HEADER-->
-    <!-- <header>
+    <header>
         <div class="conteiner header__conteiner">
                     
                 <nav class="header__nav">
@@ -27,7 +27,7 @@
                         <li class="menu__item"><a href="./index.html" class="menu__link link">Контакты</a></li>
                     </ul>
                 </nav>
-                        <button type="button" class="header__menu-btn">
+                        <button type="button" class="header__menu-btn" data-menu-button>
                         <svg class="menu-btn__icon">
                             <use href="./img/symbol-defs.svg#icon-menu_24px"></use>
                         </svg>
@@ -53,7 +53,41 @@
                     </ul>
                     
             </div>
-    </header> -->
+            <div class="mobile-menu" data-menu>
+                 <div class="conteiner mobile-menu__conteiner">
+                    <button type="button" class="mobile-menu__close-btn" data-menu-close>
+                        <svg class="mobile-menu__close-btn_icon">
+                            <use href="./img/symbol-defs.svg#close_menu"></use>
+                        </svg>
+                    </button>
+                    <ul class="mobile-menu__nav-list list">
+                        <li class="mobile-menu__item"><a href="./index.html "
+                                class="mobile-menu__link link menu__link_color_action">Студия</a></li>
+                        <li class="mobile-menu__item"><a href="./portfolio.html" class="mobile-menu__link link">Портфолио</a></li>
+                        <li class="mobile-menu__item"><a href="./index.html" class="mobile-menu__link link">Контакты</a></li>
+                    </ul>
+                    <ul class="mobile-menu__contact_list list">
+                        <li class="mobile-menu__contact_item">
+                            <a href="tel:+380961111111" class="mobile-menu__contact_link-tel link">
+                                +38 096 111 11 11
+                            </a>
+                        </li>
+                        <li class="mobile-menu__contact_item">
+                            <a href="mailto:info@devstudio.com" class="mobile-menu__contact_link-mail link">
+                                info@devstudio.com
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="list mobile-menu__social_list">
+                        <li class="mobile-menu__social_item"><a href="/" class="mobile-menu__social_link link">Instagram</a></li>
+                        <li class="mobile-menu__social_item"><a href="/" class="mobile-menu__social_link link">Twitter</a></li>
+                        <li class="mobile-menu__social_item"><a href="/" class="mobile-menu__social_link link">Facebook</a></li>
+                        <li class="mobile-menu__social_item"><a href="/" class="mobile-menu__social_link link">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+        
+    </header>
     <main>        
                 <!--HERO-->
         <section class="hero banner">
@@ -111,15 +145,34 @@
                         <h2 class="our-work__title title">Чем мы занимаемся</h2>
                         <ul class="our-work__list list">
                             <li class="our-work__item">
-                                    <img src="./img/komp.jpg" alt="компютер" width="370" class="our-work__img">
+                                <picture>
+                                    <source srcset="./img/what-we-do/komp.webp 1x, ./img/what-we-do/komp@2x.webp 2x" media="(min-width: 1200px)"
+                                        type="image/webp">
+                                    <source srcset="./img/what-we-do/komp.jpg 1x, ./img/what-we-do/komp@2x.jpg 2x" media="(min-width: 1200px)">
+                                
+                                    <img src="#" alt="компютер" width="370" class="our-work__img">
+                                </picture>
                                     <p class="our-work__about">Десктопные приложения</p>
                             </li>
                             <li class="our-work__item">
-                                <img src="./img/tel.jpg" alt="телефон" width="370" class="our-work__img">
+                                <picture>
+                                    <source srcset="./img/what-we-do/tel.webp 1x, ./img/what-we-do/tel@2x.webp 2x" media="(min-width: 1200px)"
+                                        type="image/webp">
+                                    <source srcset="./img/what-we-do/tel.jpg 1x, ./img/what-we-do/tel@2x.jpg 2x" media="(min-width: 1200px)">
+                                
+                                    <img src="./img/what-we-do/tel.jpg" alt="телефон" width="370" class="our-work__img">
+                                </picture>
+                                
                                 <p class="our-work__about">Мобильные приложения</p>
                             </li>
                             <li class="our-work__item">
-                                <img src="./img/tablet.jpg" alt="планшет" width="370" class="our-work__img">
+                                <picture>
+                                    <source srcset="./img/what-we-do/tablet.webp 1x, ./img/what-we-do/tablet@2x.webp 2x" media="(min-width: 1200px)"
+                                        type="image/webp">
+                                    <source srcset="./img/what-we-do/tablet.jpg 1x, ./img/what-we-do/tablet@2x.jpg 2x" media="(min-width: 1200px)">
+                                
+                                    <img src="#" alt="телефон" width="370" class="our-work__img">
+                                </picture>
                                 <p class="our-work__about">Дизайнерские решения</p>
                             </li>
                         </ul>
@@ -394,18 +447,18 @@
         <!--подвал-->
     <footer class="footer">
         <div class="footer__conteiner conteiner">
-        <div class="">
+            <div class="footer__address-box">     
                 <a href="/" class="logo footer__logo">
                     <span class="logo__span">Web</span>Studio
                 </a>
                 <address class="address">
                     <p class="address__about">г. Киев, пр-т Леси Украинки, 26</p>
-                    <ul class="list">
+                    <ul class="footer__address-list list">
                         <li class="footer-address__item"><a href="mailto:info@devstudio.com" class="link address__link ">info@devstudio.com</a></li>
                         <li><a href="tel:+380961111111" class="link address__link">+38 096 111 11 11</a></li>
                     </ul>
                 </address>
-        </div>
+            </div>
             <div class="join">
                     <h3 class="title join__title">присоединяйтесь</h3>
                     <ul class="list social ">
@@ -443,7 +496,7 @@
                 <h3 class="subscribe__title">Подпишитесь на рассылку</h3>
                 <form action="#" method="GET" class="subscribe__form">
                 <input type="email" name="user-mail" placeholder="E-mail" class="subscribe__input">
-                <button type="submit" class="subscribe__button">
+                <button type="submit" class="subscribe__button button">
                     Подписаться 
                     <svg class="subscribe__icon">
                         <use href="./img/symbol-defs.svg#icon-send"></use>
@@ -453,7 +506,7 @@
             </div>
         </div>
     </footer>
-    <!-- <div class="backdrob is-hidden" data-modal>
+    <div class="backdrob is-hidden" data-modal>
         <div class="modal">
             <button type="button" data-modal-close class="button-close">
                 <svg class="button-close__icon">
@@ -511,6 +564,7 @@
             </form>
         </div>
     </div>
-    <script src="./js/modal.js"></script> -->
+    <script src="./js/menu.js"></script>
+    <script src="./js/modal.js"></script>
 </body>
 </html>

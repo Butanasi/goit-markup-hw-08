@@ -1,0 +1,97 @@
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+
+  overflow: auto;
+  z-index: 200;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity var(--time-animation) var(--cubic),
+    visibility var(--time-animation) var(--cubic);
+
+  &.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  &__conteiner {
+    position: relative;
+    padding-left: 25px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+  }
+  &__close-btn_icon {
+    width: 40px;
+    height: 40px;
+    fill: #000000;
+    transition: fill var(--time-animation) var(--cubic);
+
+    .mobile-menu__close-btn:hover &,
+    .mobile-menu__close-btn:focus & {
+      fill: var(--color-link);
+    }
+  }
+
+  &__nav-list {
+    margin-bottom: 302px;
+  }
+  &__item {
+  }
+  &__link {
+    @include font($fs: 40px, $fw: 500, $lh: 47px);
+    text-align: center;
+    letter-spacing: 0.02em;
+  }
+  &__contact_list {
+    margin-bottom: 64px;
+  }
+  &__contact_item {
+  }
+  .mobile-menu__contact_link-tel {
+    @include font($fs: 34px, $fw: 500, $lh: 40px);
+    letter-spacing: 0.02em;
+    color: var(--color-link);
+  }
+  .mobile-menu__contact_link-mail {
+    @include font($fs: 24px, $fw: 500, $lh: 28px);
+    letter-spacing: 0.02em;
+    color: var(--color-text);
+  }
+
+  &__social_list {
+    display: flex;
+  }
+  &__social_item {
+    padding-right: 10px;
+    padding-left: 10px;
+    border-right: 1px solid #d3d3d3;
+    &:last-child {
+      border: none;
+    }
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+  &__social_link {
+    @include font($fs: 18px, $fw: 500, $lh: 22px);
+    letter-spacing: 0.02em;
+
+    color: var(--color-link);
+  }
+}
