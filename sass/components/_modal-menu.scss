@@ -47,7 +47,9 @@
       fill: var(--color-link);
     }
   }
-
+  &__conteiner {
+    padding: 48px 15px;
+  }
   &__nav-list {
     margin-bottom: 302px;
   }
@@ -61,7 +63,8 @@
   &__contact_list {
     margin-bottom: 64px;
   }
-  &__contact_item {
+  &__contact_item:first-child {
+    margin-bottom: 32px;
   }
   .mobile-menu__contact_link-tel {
     @include font($fs: 34px, $fw: 500, $lh: 40px);

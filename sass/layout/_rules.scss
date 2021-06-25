@@ -11,6 +11,9 @@
 .rules__item {
   max-width: 100%;
   text-align: left;
+  &:last-child {
+    margin-bottom: 62px;
+  }
 }
 .rules__box {
   display: flex;
@@ -27,10 +30,18 @@
   height: 70px;
 }
 .rules__list {
+  justify-content: center;
   display: grid;
+  gap: 30px;
 }
 .rules__about {
   line-height: 1.71;
+}
+@media screen and(min-width: 480px) {
+  .rules__list {
+    grid-template-columns: repeat(1, 450px);
+    grid-template-rows: repeat(4, 226px);
+  }
 }
 
 // 768+

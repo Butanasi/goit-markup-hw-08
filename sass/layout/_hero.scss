@@ -1,5 +1,7 @@
 .hero {
-  width: 480px;
+  justify-content: center;
+  width: 100%;
+  height: 400px;
   text-align: center;
   padding: 118px 0;
   background-color: black;
@@ -15,9 +17,6 @@
   max-width: 400px;
   margin: 0 auto;
   @include font($fs: 26px, $fw: 900, $lh: 42px);
-  // font-weight: 900;
-  // font-size: 26px;
-  // line-height: 42px;
 
   text-align: center;
   letter-spacing: 0.06em;
@@ -27,6 +26,17 @@
 }
 
 // 2x-480px
+@media screen and (max-width: 767px) {
+  .hero {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../img/banner/banner-mob.jpg");
+    background-size: cover;
+  }
+}
 @media (min-device-pixel-ratio: 2) and (max-width: 767px),
   (min-resolution: 192dpi) and (max-width: 767px),
   (min-resolution: 2dppx) and (max-width: 767px) {
@@ -43,7 +53,7 @@
 // 768px
 @media screen and (min-width: 768px) {
   .hero {
-    width: 768px;
+    min-width: 768px;
     background-image: linear-gradient(
         to right,
         rgba(47, 48, 58, 0.4),
@@ -69,7 +79,8 @@
 // 1200px
 @media screen and (min-width: 1200px) {
   .hero {
-    width: 768px;
+    max-width: 1600px;
+    height: 600px;
     background-image: linear-gradient(
         to right,
         rgba(47, 48, 58, 0.4),
