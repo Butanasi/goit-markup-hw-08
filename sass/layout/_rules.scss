@@ -49,6 +49,7 @@
   }
   .rules__list {
     grid-template-columns: repeat(2, 354px);
+    grid-template-rows: none;
     gap: 30px;
     justify-content: center;
   }
