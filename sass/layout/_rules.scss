@@ -64,9 +64,6 @@
 }
 // 1200+
 @media screen and(min-width: 1200px) {
-  .rules {
-    margin: 94px 0;
-  }
   .rules__list {
     grid-template-columns: repeat(4, 270px);
     grid-template-rows: none;
