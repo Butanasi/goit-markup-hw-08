@@ -11,9 +11,6 @@
 .rules__item {
   max-width: 100%;
   text-align: left;
-  &:last-child {
-    margin-bottom: 62px;
-  }
 }
 .rules__box {
   display: flex;
@@ -33,6 +30,7 @@
   justify-content: center;
   display: grid;
   gap: 30px;
+  margin-bottom: 62px;
 }
 .rules__about {
   line-height: 1.71;
@@ -70,6 +68,7 @@
   }
   .rules__list {
     grid-template-columns: repeat(4, 270px);
+    grid-template-rows: none;
   }
   .rules__item {
     width: 270px;

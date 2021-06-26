@@ -51,9 +51,7 @@
     padding: 48px 15px;
   }
   &__nav-list {
-    margin-bottom: 302px;
-  }
-  &__item {
+    margin-bottom: 100px;
   }
   &__link {
     @include font($fs: 40px, $fw: 500, $lh: 47px);
@@ -61,10 +59,10 @@
     letter-spacing: 0.02em;
   }
   &__contact_list {
-    margin-bottom: 64px;
+    margin-bottom: 50px;
   }
   &__contact_item:first-child {
-    margin-bottom: 32px;
+    margin-bottom: 28px;
   }
   .mobile-menu__contact_link-tel {
     @include font($fs: 34px, $fw: 500, $lh: 40px);
@@ -79,6 +77,7 @@
 
   &__social_list {
     display: flex;
+    flex-wrap: wrap;
   }
   &__social_item {
     padding-right: 10px;
@@ -96,5 +95,16 @@
     letter-spacing: 0.02em;
 
     color: var(--color-link);
+  }
+}
+@media screen and(min-width: 480px) {
+  .mobile-menu__nav-list {
+    margin-bottom: 302px;
+  }
+  .mobile-menu__contact_list {
+    margin-bottom: 64px;
+  }
+  .mobile-menu__contact_item:first-child {
+    margin-bottom: 32px;
   }
 }

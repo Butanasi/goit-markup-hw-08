@@ -81,6 +81,7 @@
   .hero {
     max-width: 1600px;
     height: 600px;
+    margin: 0 auto;
     background-image: linear-gradient(
         to right,
         rgba(47, 48, 58, 0.4),
@@ -88,8 +89,6 @@
       ),
       url("../img/banner/banner-des.jpg");
     padding: 200px 0;
-    width: 100%;
-    height: 600px;
   }
   .hero__title {
     max-width: 690px;
