@@ -1,5 +1,6 @@
 .our-team {
   background-color: var(--background);
+  padding: 94px 0;
 }
 
 .our-team__title {
@@ -44,9 +45,6 @@
   }
 }
 @media screen and(min-width: 1200px) {
-  .our-team {
-    padding: 94px 0;
-  }
   .our-team__list {
     grid-template-columns: repeat(4, 270px);
     gap: 30px;
